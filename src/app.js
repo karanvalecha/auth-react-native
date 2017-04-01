@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import firebase from 'firebase';
 import { Header } from './components/common';
-import { firebase } from 'firebase';
 
 class App extends Component {
+  componentWillMount() {
+    firebase.initializeApp({
+      apiKey: "AIzaSyBmDg-67-q2IjioFJjJckscyvkHB4iFDDU",
+      authDomain: "auth-react-native-e0764.firebaseapp.com",
+      databaseURL: "https://auth-react-native-e0764.firebaseio.com",
+      projectId: "auth-react-native-e0764",
+      storageBucket: "auth-react-native-e0764.appspot.com",
+      messagingSenderId: "1008638104823"
+    });
+  }
+
   render() {
     return (
       <View>
@@ -12,7 +23,7 @@ class App extends Component {
           Hello World
         </Text>
       </View>
-    )
+    );
   }
 }
 
