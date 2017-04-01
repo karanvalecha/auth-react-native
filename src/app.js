@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { Header, Card, CardSection, Button } from './components/common';
-import {firebase } from 'firebase';
+import { Header } from './components/common';
+import { firebase } from 'firebase';
 
 class App extends Component {
-  render () {
+  render() {
     return (
-    	<View>
-        <Header headerText={"Hey there"}/>
-    	</View>
+      <View>
+        <Header headerText="Authentication" />
+        <Text>
+          Hello World
+        </Text>
+      </View>
     )
   }
 }
